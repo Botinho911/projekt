@@ -60,11 +60,15 @@ int nyelvek = sizeof(programok) / sizeof(programok[0]);
 
 
 void help() {
-    printf("'alap' %s\n\nHasznalata: alap <nyelv> [-k,--kapcsolo]\n\n", VERSION);
-    printf("Hasznalhato kapcsolok:\n");
+    printf("'alap' %s\n", VERSION);
+    puts("");
+    printf("Hasznalat: alap <nyelv> [-k, --kapcsolo]\n");
+    puts("");
+    printf("Kapcsolok:\n");
     printf("  -h, --help      Megjeleniti ezt a sugot\n");
     printf("  -v, --version   Verzioszam\n");
-    printf("  --stdout        Kiirja a sablon forraskodot a konzolra fajl letrehozasa nelkul\n\n");
+    printf("  --stdout        Kiirja a sablon forraskodot a konzolra fajl letrehozasa nelkul\n");
+    puts("");
     printf("Tamogatott nyelvek:\n");
     for (int i = 0; i < nyelvek; ++i) {
         printf("  %-10s - %s [%s]\n", programok[i].nyelv, programok[i].leiras, programok[i].fnev);
